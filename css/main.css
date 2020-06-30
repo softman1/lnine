@@ -1,0 +1,322 @@
+@font-face {
+  font-family: 'Myriad';
+  src: url("../fonts/myriad-bold.woff2") format("woff2"), url("../fonts/myriad-bold.woff") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Myriad';
+  src: url("../fonts/myriad-light.woff2") format("woff2"), url("../fonts/myriad-light.woff") format("woff");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Nickname';
+  src: url("../fonts/n.woff2") format("woff2"), url("../fonts/n.woff") format("woff");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url(../image/bg5.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.girls {
+  position: absolute;
+  width: 35%;
+  left: 32.5%;
+  bottom: -2%;
+  display: block;
+}
+
+.girls img {
+  width: 100%;
+  display: block;
+}
+
+.notice {
+  position: absolute;
+  width: 100%;
+  left: 00%;
+  top: 0;
+  z-index: 2;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+
+  background: rgba(3, 15, 15, 0.876);
+  height: fit-content;
+  box-shadow: 4px 4px 10px rgb(10, 10, 10);
+}
+
+.notice .notice-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.notice .notice-wrapper .notice-bg {
+  width: 100%;
+}
+
+.notice .notice-wrapper .notice-bg img {
+  width: 100%;
+}
+
+.notice .notice-wrapper .notice-text {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: 'Myriad';
+  font-weight: 100;
+  color: white;
+ 
+}
+
+.notice .notice-wrapper .notice-text .title {
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.notice .notice-wrapper .notice-text .text-first {
+  margin-top: 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.notice .notice-wrapper .notice-text .text-first a {
+  color: white;
+}
+
+.notice .notice-wrapper .notice-text .text-second {
+  color: #a7a7a7;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.notice .notice-wrapper .notice-text .text-second a {
+  color: white;
+}
+
+.notice .notice-wrapper .notice-text .notice-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+      width: 40%;
+      margin: 0 auto;
+  margin-top: 2%;
+}
+
+.notice .notice-wrapper .notice-text .notice-btns .btns {
+  display: block;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  font-size: 14px;
+  padding: 15px 0;
+}
+
+.notice .notice-wrapper .notice-text .notice-btns .btn-true {
+  background: #1e99be;
+  color: white;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 4px solid #1e99be;
+  -webkit-transition: all ease .4s;
+  transition: all ease .4s;
+}
+
+.notice .notice-wrapper .notice-text .notice-btns .btn-true:hover {
+  border: 4px solid #dacf19;
+}
+
+.notice .notice-wrapper .notice-text .notice-btns .btn-false {
+  background: #ffffff;
+  color: #28134d;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 4px solid #ffffff;
+  -webkit-transition: all ease .2s;
+  transition: all ease .2s;
+}
+
+.notice .notice-wrapper .notice-text .notice-btns .btn-false:hover {
+  border: 4px solid #000;
+}
+
+.play-btn {
+  display: block;
+  font-family: 'Myriad';
+  position: absolute;
+  width: 20%;
+  bottom: 10%;
+  left: 40%;
+  background: #1e99be;
+  color: white;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 4px solid #1a1b1a;
+  -webkit-transition: all ease .4s;
+  transition: all ease .4s;
+  text-align: center;
+  font-size: 3vw;
+  text-shadow: 2px 2px 10px black;
+  padding: 10px;
+
+  animation: btn 1s ease;
+  animation-iteration-count: infinite;
+
+}
+
+.notice-destroy {
+  opacity: 0;
+  top: -100%;
+}
+
+.notice-fix .notice-wrapper .notice-text .title {
+  font-size: 20px;
+}
+
+.notice-fix .notice-wrapper .notice-text .text-first {
+  font-size: 16px;
+}
+
+.notice-fix .notice-wrapper .notice-text .text-second {
+  font-size: 16px;
+}
+
+.notice-fix .notice-wrapper .notice-text .notice-btns {
+  margin-top: 1%;
+}
+
+.notice-fix .notice-wrapper .notice-text .notice-btns .btns {
+  font-size: 16px;
+}
+
+.mobile {
+  position: absolute;
+  width: 60%;
+  left: 10%;
+  bottom: 2%;
+  -webkit-transition: all ease 1.8s;
+  transition: all ease 1.8s;
+  display: block;
+}
+
+.mobile img {
+  width: 100%;
+}
+
+.arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6%;
+  opacity: 0;
+}
+
+.arrows img {
+  width: 100%;
+}
+
+.arrow1 {
+  top: 50%;
+  left: 32%;
+}
+
+.arrow2 {
+  top: 50%;
+  left: 60%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.names {
+  font-family: 'Nickname';
+  color: #28134d;
+  position: absolute;
+  font-size: 2.4vw;
+  opacity: 0;
+}
+
+.name1 {
+  top: 44%;
+  left: 28.5%;
+  font-weight: bolder;
+}
+
+.name2 {
+  top: 44%;
+  left: 62%;
+  font-weight: bolder;
+}
+
+.name-active {
+  -webkit-animation: fadein .8s ease;
+          animation: fadein .8s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+.arrow-active {
+  -webkit-animation: fadein .8s ease;
+          animation: fadein .8s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes btn {
+  from {
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.05);
+  }
+  to{
+    transform: scale(1);
+  }
+}
